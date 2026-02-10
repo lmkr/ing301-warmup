@@ -17,7 +17,9 @@ def read_file(file_name):
     tilbake en liste av tekststrenger som representerer linjene i filen.
     """
     # Tips: kanksje "open"-funksjonen kunne være nyttig her: https://docs.python.org/3/library/functions.html#open
-    return NotImplemented  # TODO: Du må erstatte denne linjen
+    with open(file_name, 'rt') as file:
+        lines = file.read().splitlines()
+    return lines  # TODO: Du må erstatte denne linjen
 
 
 def lines_to_words(lines):
